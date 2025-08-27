@@ -1,0 +1,21 @@
+{
+  "info": { "name": "Meet Scheduler API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    {
+      "name": "Auth (open in browser)",
+      "request": { "method": "GET", "url": "http://localhost:3000/auth" }
+    },
+    {
+      "name": "Schedule Meeting",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"start\": \"2025-09-01T15:00\",\n  \"durationMinutes\": 30,\n  \"timezone\": \"Europe/Berlin\"\n}"
+        },
+        "url": "http://localhost:3000/api/schedule"
+      }
+    }
+  ]
+}
